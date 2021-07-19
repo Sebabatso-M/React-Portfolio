@@ -1,0 +1,34 @@
+.menu {
+    position: absolute;
+    top: to-rem(100);
+    left: 50%;
+    transform: translateX(-50%);
+
+    transition: opacity 0.3s 0.2s, visibility 0.3s 0.2s;
+
+    overflow-x: hidden;
+    width: 90%;
+
+    .active {
+        color: $orange;
+        font-weight: 500;
+
+        &:hover {
+            color: $orange;
+            font-weight: 500;
+        }
+
+        &:visited {
+            color: $orange;
+        }
+    }
+
+    @include breakpoint(tablet) {
+        position: unset;
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+        overflow: visible;
+        width: max-content;
+    }
+}

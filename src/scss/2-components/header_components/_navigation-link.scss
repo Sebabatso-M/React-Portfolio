@@ -1,0 +1,41 @@
+.navigation__link {
+    display: block;
+    padding: to-rem(10) 0;
+
+    font-size: to-rem(32);
+    text-align: center;
+    transform: translateX(100%);
+    color: $white;
+
+    &:hover {
+        color: $l-grey;
+    }
+
+    &:visited{
+        color: $white;
+    }
+
+    @include breakpoint(tablet){
+        transform: translateX(0);
+        display: inline-block;
+        font-size: to-rem(18);
+        position: relative;
+
+        &:not(:last-child){
+            margin: 0 to-rem(8);
+        }
+    }
+}
+
+.opened {
+    animation: slide 0.4s ease-in-out forwards;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(30%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,30 @@
+.header {
+    background-color: $d-grey;
+
+    position: sticky;
+    top: to-rem(-0.5);
+}
+
+.header__inner {
+    @include --flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 auto;
+    width: 90%;
+
+    @include breakpoint(mobile-m){
+        width:85%;
+    }
+
+    
+}
+
+.scroll-progress {
+    background: $orange;
+    height: to-rem(3);
+    border-radius: to-rem(25);
+    width: 0;
+    max-width: 100%;
+}

@@ -1,0 +1,25 @@
+.close-btn {
+    @include fade-in;
+
+    // background: url('../../assests/svgs/close-btn.svg');
+    // background: url('../../../assests/svgs/close-btn.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: to-rem(14);
+    right: 6%;
+    z-index: 10;
+
+    height: to-rem(32);
+    width: to-rem(32);
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    @include breakpoint(mobile-m) {
+        right: 8.5%;
+    }
+}

@@ -1,0 +1,10 @@
+.main{
+    text-align: center;
+
+    margin:0 auto;
+    width:88%;
+
+    @include breakpoint(mobile-m){
+        width:85%;
+    }
+}
