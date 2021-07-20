@@ -1,22 +1,29 @@
 import React from 'react';
+import {
+    Wrapper,
+    Logo,
+    CloseBtn,
+    MenuBtn,
+    Overlay,
+} from './HeaderInner.styles';
 import { Menu } from '../Menu';
-import { S_LogoSvg } from '../../assests';
+import { S_LogoSvg, CloseBtnSvg, MenuBtnSvg } from '../../assests';
 
 export const HeaderInner = () => {
     return (
-        <div className='header__inner'>
-            <a href='#top'>
+        <Wrapper className='header__inner'>
+            <Logo href='#top'>
                 <img className='logo' src={S_LogoSvg} alt='logo' />
-            </a>
-            <div className='overlay hidden'>
+            </Logo>
+            <Overlay className='overlay hidden'>
                 {/* Close Menu Btn Start */}
-                <div className='close-btn'></div>
-            </div>
+                <CloseBtn className='close-btn' icon={CloseBtnSvg}></CloseBtn>
+            </Overlay>
 
             {/* Hamburger Menu Start */}
-            <div className='open-btn'></div>
+            <MenuBtn className='open-btn' icon={MenuBtnSvg}></MenuBtn>
 
             <Menu />
-        </div>
+        </Wrapper>
     );
 };

@@ -1,12 +1,13 @@
 import React from 'react';
+import { Wrapper, ScrollProgress } from './Header.styles';
 import { HeaderInner } from '../HeaderInner';
 
 export const Header = () => {
     return (
-        <div className='header'>
+        <Wrapper className='header'>
             <HeaderInner />
 
-            <div className='scroll-progress'></div>
-        </div>
+            <ScrollProgress className='scroll-progress' />
+        </Wrapper>
     );
 };

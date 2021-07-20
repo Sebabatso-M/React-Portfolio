@@ -1,6 +1,10 @@
 import React from 'react';
-import { Wrapper } from './ContainerSub.styles';
+import { Wrapper, Background } from './ContainerSub.styles';
 
 export const ContainerSub = () => {
-    return <Wrapper></Wrapper>;
+    return (
+        <Wrapper>
+            <Background></Background>
+        </Wrapper>
+    );
 };
