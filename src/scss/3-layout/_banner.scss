@@ -1,8 +1,0 @@
-.banner{
-    margin: 0 auto;
-    width: 90%;
-
-    @include breakpoint(mobile-m){
-        width:85%;
-    }
-}
