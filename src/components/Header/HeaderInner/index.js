@@ -7,7 +7,7 @@ import {
     Overlay,
 } from './HeaderInner.styles';
 import { Menu } from '../Menu';
-import { S_LogoSvg, CloseBtnSvg, MenuBtnSvg } from '../../assests';
+import { S_LogoSvg, CloseBtnSvg, MenuBtnSvg } from '../../../assests';
 
 export const HeaderContext = React.createContext();
 

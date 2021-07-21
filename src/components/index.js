@@ -1,3 +1,3 @@
-import { Container } from './Container';
+import { ContainerHead } from './Container';
 
-export { Container };
+export { ContainerHead };

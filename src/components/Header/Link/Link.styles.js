@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { toRem } from '../../Utils/functions';
+import { toRem } from '../../../Utils/functions';
 
 export const Wrapper = styled.a`
     display: block;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { toRem } from '../../Utils/functions';
-import { SlideArrowsSvg } from '../../assests';
+import { toRem } from '../../../Utils/functions';
+import { SlideArrowsSvg } from '../../../assests';
 
 export const BannerTitle = styled.h1`
     font-weight: 500;

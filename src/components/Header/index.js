@@ -1,6 +1,6 @@
 import React from 'react';
 import { Wrapper, ScrollProgress } from './Header.styles';
-import { HeaderInner } from '../HeaderInner';
+import { HeaderInner } from './HeaderInner';
 
 export const Header = () => {
     return (

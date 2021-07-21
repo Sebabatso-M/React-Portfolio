@@ -1,6 +1,6 @@
 import React from 'react';
 import { Wrapper, Background } from './ContainerSub.styles';
-import { Banner } from '../Banner';
+import { Banner } from './Banner';
 
 export const ContainerSub = () => {
     return (
