@@ -17,4 +17,7 @@ export const Wrapper = styled.a`
     &:visited {
         color: var(--white);
     }
+    &.opened {
+        animation-delay: 0.1s;
+    }
 `;

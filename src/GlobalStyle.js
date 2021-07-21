@@ -77,4 +77,21 @@ img {
     overflow: hidden;
 }
 
+.opened {
+    animation: slide 0.5s forwards;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(30%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.fade-in{
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
 `;
