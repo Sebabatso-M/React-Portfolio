@@ -94,4 +94,8 @@ img {
     transition: opacity 0.3s, visibility 0.3s;
 }
 
+h1,h2,h3{
+    text-transform: capitalize;
+}
+
 `;

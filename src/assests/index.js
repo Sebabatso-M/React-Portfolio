@@ -31,6 +31,7 @@ import TailwindSvg from './svgs/tailwind.svg';
 import TaskSvg from './svgs/task_logo.svg';
 import TopSvg from './svgs/top.svg';
 import YoutubeSvg from './svgs/tube-o.svg';
+import GitSvg from './svgs/git.svg';
 
 export {
     HuddleImg,
@@ -63,4 +64,5 @@ export {
     TaskSvg,
     TopSvg,
     YoutubeSvg,
+    GitSvg,
 };
