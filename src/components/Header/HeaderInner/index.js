@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
     Wrapper,
     Logo,
@@ -17,6 +17,10 @@ export const HeaderInner = () => {
     function clickHandler() {
         setIsOpen(!isOpen);
     }
+
+    useEffect(() => {
+        document.body.className = `${isOpen ? 'no-scroll' : ''}`;
+    });
 
     return (
         <HeaderContext.Provider value={{ isOpen, clickHandler }}>

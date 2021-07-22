@@ -5,7 +5,7 @@ import { Skills, SkillLearning } from '../../../web_content';
 
 export const MySkills = () => {
     return (
-        <Wrapper>
+        <Wrapper className='skills-container'>
             {Skills.map((skill) => {
                 const { id } = skill;
 
@@ -17,7 +17,7 @@ export const MySkills = () => {
 
 export const SkillsLearning = () => {
     return (
-        <Wrapper>
+        <Wrapper className='skills-container'>
             {SkillLearning.map((skill) => {
                 const { id } = skill;
 

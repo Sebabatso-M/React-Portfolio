@@ -7,6 +7,8 @@ import {
 } from './Main.styles';
 import { AboutMeInfo } from './About';
 import { MySkills, SkillsLearning } from './Skills';
+import { ProjectCard } from './Projects';
+import { ProjectsData } from '../../web_content';
 
 export const Main = () => {
     return (
@@ -42,6 +44,20 @@ export const Main = () => {
                 <SectionSubtitle>Skills currently learning</SectionSubtitle>
 
                 <SkillsLearning />
+            </MainSection>
+
+            <MainSection className='main__section projects' id='projects'>
+                <SectionTitle>My Projects</SectionTitle>
+
+                {ProjectsData.map((projectdata) => {
+                    return (
+                        <ProjectCard
+                            key={projectdata.id}
+                            {...projectdata.project_info}
+                            techStack={projectdata.tech_stack}
+                        />
+                    );
+                })}
             </MainSection>
         </Wrapper>
     );
