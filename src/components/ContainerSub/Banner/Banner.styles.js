@@ -43,7 +43,7 @@ export const Arrow = styled.a`
             transform: translateY(0);
         }
         90% {
-            transform: translateY(to-rem(30));
+            transform: translateY(${toRem(30)});
         }
 
         to {

@@ -120,6 +120,7 @@ export const ProjectsData = [
             { id: 2, tech: 'CSS' },
             { id: 3, tech: 'JavaScript' },
             { id: 4, tech: 'SCSS' },
+            { id: 5, tech: 'React' },
         ],
     },
     {
@@ -138,22 +139,9 @@ export const ProjectsData = [
             { id: 4, tech: 'SCSS' },
         ],
     },
+
     {
         id: 3,
-        project_info: {
-            img: HuddleImg,
-            title: 'Huddle-landing-page',
-            desc: 'A challenge from frontendmentor.io, with a little bit of sauce from yours truly.',
-            siteUrl: 'http://huddle-landing-page-sebabatso-m.vercel.app/',
-            reposUrl: 'https://github.com/Sebabatso-M/huddle-landing-page',
-        },
-        tech_stack: [
-            { id: 1, tech: 'HTML' },
-            { id: 2, tech: 'CSS' },
-        ],
-    },
-    {
-        id: 4,
         project_info: {
             img: BaseImg,
             title: 'Base-apparel-coming',
@@ -165,6 +153,20 @@ export const ProjectsData = [
             { id: 1, tech: 'HTML' },
             { id: 2, tech: 'CSS' },
             { id: 3, tech: 'JavaScript' },
+        ],
+    },
+    {
+        id: 4,
+        project_info: {
+            img: HuddleImg,
+            title: 'Huddle-landing-page',
+            desc: 'A challenge from frontendmentor.io, with a little bit of sauce from yours truly.',
+            siteUrl: 'http://huddle-landing-page-sebabatso-m.vercel.app/',
+            reposUrl: 'https://github.com/Sebabatso-M/huddle-landing-page',
+        },
+        tech_stack: [
+            { id: 1, tech: 'HTML' },
+            { id: 2, tech: 'CSS' },
         ],
     },
     {
