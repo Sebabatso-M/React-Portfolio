@@ -3,7 +3,7 @@ import { Header } from '../Header';
 import { ContainerSub } from '../ContainerSub';
 import { FootWrapper, HeadWrapper } from './Container.styles';
 import { Main } from '../Main';
-import { ContactForm } from '../ContactForm';
+import { Footer } from '../Footer';
 
 export const ContainerHead = () => {
     return (
@@ -18,7 +18,7 @@ export const ContainerHead = () => {
 export const ContainerFoot = () => {
     return (
         <FootWrapper>
-            <ContactForm />
+            <Footer />
         </FootWrapper>
     );
 };

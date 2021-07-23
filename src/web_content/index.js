@@ -14,6 +14,10 @@ import {
     GithubBgImg,
     BlogrImg,
     ProfileImg,
+    YoutubeSvg,
+    GithubOrangeSvg,
+    InstagramSvg,
+    LinkinSvg,
 } from '../assests';
 
 export const Links = [
@@ -180,5 +184,32 @@ export const ProjectsData = [
             reposUrl: '',
         },
         tech_stack: [],
+    },
+];
+
+export const Socials = [
+    {
+        id: 1,
+        link: 'https://www.instagram.com/sl_mashego/',
+        img: InstagramSvg,
+        name: 'Instagram Icon',
+    },
+    {
+        id: 2,
+        link: '',
+        img: LinkinSvg,
+        name: 'LinkedIn Icon',
+    },
+    {
+        id: 3,
+        link: 'https://www.youtube.com/channel/UCL-FataRhFtb2P7B0N-br0g',
+        img: YoutubeSvg,
+        name: 'Youtube Icon',
+    },
+    {
+        id: 4,
+        link: 'https://github.com/Sebabatso-M',
+        img: GithubOrangeSvg,
+        name: 'Github Icon',
     },
 ];
