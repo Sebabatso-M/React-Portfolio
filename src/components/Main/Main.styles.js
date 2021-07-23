@@ -1,10 +1,18 @@
 import styled from 'styled-components';
+import { breakpoint } from '../../Utils/functions';
 
 export const Wrapper = styled.main`
     text-align: center;
 
     margin: 0 auto;
     width: 88%;
+
+    ${breakpoint({
+        size: 'mobile_m',
+        content: `
+        width:85%;
+    `,
+    })}
 `;
 
 export const MainSection = styled.section`

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { toRem } from '../../../Utils/functions';
+import { toRem, breakpoint } from '../../../Utils/functions';
 
 export const Wrapper = styled.div`
     position: absolute;
@@ -25,4 +25,16 @@ export const Wrapper = styled.div`
             color: var(--orange);
         }
     }
+
+    ${breakpoint({
+        size: 'tablet',
+        content: `
+        position: unset;
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+        overflow: visible;
+        width: max-content;
+    `,
+    })}
 `;

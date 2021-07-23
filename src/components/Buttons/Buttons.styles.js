@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { toRem } from '../../Utils/functions';
+import { toRem, breakpoint } from '../../Utils/functions';
 
 export const Wrapper = styled.a`
     display: block;
@@ -27,6 +27,13 @@ export const Wrapper = styled.a`
     &:active {
         transform: scale(0.9);
     }
+
+    ${breakpoint({
+        size: 'tablet',
+        content: `
+        margin-bottom: ${toRem(15)};
+    `,
+    })}
 `;
 
 export const ButtonImg = styled.span`
@@ -47,4 +54,12 @@ export const ButtonContainer = styled.div`
 
     flex-direction: column;
     align-items: center;
+
+    ${breakpoint({
+        size: 'tablet',
+        content: `
+        flex-direction: row;
+        justify-content: space-evenly;
+    `,
+    })}
 `;

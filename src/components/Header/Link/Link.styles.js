@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { toRem } from '../../../Utils/functions';
+import { toRem, breakpoint } from '../../../Utils/functions';
 
 export const Wrapper = styled.a`
     display: block;
@@ -20,4 +20,18 @@ export const Wrapper = styled.a`
     &.opened {
         animation-delay: 0.1s;
     }
+
+    ${breakpoint({
+        size: 'tablet',
+        content: `
+        transform: translateX(0);
+        display: inline-block;
+        font-size: ${toRem(18)};
+        position: relative;
+
+        &:not(:last-child){
+            margin: 0 ${toRem(8)};
+        }
+    `,
+    })}
 `;

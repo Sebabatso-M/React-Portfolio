@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { toRem } from '../../../Utils/functions';
+import { toRem, breakpoint } from '../../../Utils/functions';
 
 export const Wrapper = styled.div`
     display: flex;
@@ -9,6 +9,13 @@ export const Wrapper = styled.div`
 
     margin: 0 auto;
     width: 90%;
+
+    ${breakpoint({
+        size: 'mobile_m',
+        content: `
+        width:85%;
+    `,
+    })}
 `;
 
 export const Logo = styled.a`
@@ -38,9 +45,12 @@ export const CloseBtn = styled.div`
         cursor: pointer;
     }
 
-    /* @include breakpoint(mobile-m) {
+    ${breakpoint({
+        size: 'mobile_m',
+        content: `
         right: 8.5%;
-    } */
+    `,
+    })}
 `;
 
 export const MenuBtn = styled.div`
@@ -55,6 +65,13 @@ export const MenuBtn = styled.div`
     &:hover {
         cursor: pointer;
     }
+
+    ${breakpoint({
+        size: 'tablet',
+        content: `
+        display: none;
+    `,
+    })}
 `;
 
 export const Overlay = styled.div`
@@ -68,4 +85,11 @@ export const Overlay = styled.div`
 
     height: 100vh;
     width: 100vw;
+
+    ${breakpoint({
+        size: 'tablet',
+        content: `
+        display: none;
+    `,
+    })}
 `;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { toRem } from '../../Utils/functions';
+import { toRem, breakpoint } from '../../Utils/functions';
 
 export const Wrapper = styled.div`
     margin: 0 auto;
@@ -13,6 +13,13 @@ export const Wrapper = styled.div`
     .bad {
         color: rgb(255, 0, 0);
     }
+
+    ${breakpoint({
+        size: 'mobile_m',
+        content: `
+        width:85%;
+    `,
+    })}
 `;
 
 export const Form = styled.form`

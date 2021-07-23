@@ -122,8 +122,7 @@ export const ProjectsData = [
             { id: 1, tech: 'HTML' },
             { id: 2, tech: 'CSS' },
             { id: 3, tech: 'JavaScript' },
-            { id: 4, tech: 'SCSS' },
-            { id: 5, tech: 'React' },
+            { id: 4, tech: 'React' },
         ],
     },
     {
