@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { toRem } from '../../Utils/functions';
 
-export const Button = styled.a`
+export const Wrapper = styled.a`
     display: block;
 
     background: var(--orange);
@@ -17,6 +17,7 @@ export const Button = styled.a`
 
     padding: ${toRem(12)} 0;
     width: ${toRem(150)};
+    margin: 0 ${(props) => (props.ms ? props.ms : 0)};
     margin-bottom: ${toRem(25)};
 
     &:hover {
@@ -32,8 +33,18 @@ export const ButtonImg = styled.span`
     display: inline-block;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: ${(props) => props.s + '%'};
+    background-image: url(${(props) => props.src});
+    background-position-y: ${(props) => props.y + '%'};
     width: ${toRem(18)};
     height: ${toRem(18)};
-    margin-left: ${toRem(4)};
+    margin-left: ${toRem(6)};
     vertical-align: ${toRem(-3)};
+`;
+
+export const ButtonContainer = styled.div`
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
 `;

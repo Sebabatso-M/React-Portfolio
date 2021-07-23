@@ -9,10 +9,15 @@ import {
     TechStack,
 } from './Project.styles';
 
+import { LinkSvg, CodeSvg, MoreSvg } from '../../../assests';
+
+import { Button, ButtonsContainer } from '../../Buttons';
+
 export const ProjectCard = ({
     img,
     title,
     desc,
+    more,
     siteUrl,
     reposUrl,
     techStack,
@@ -32,6 +37,36 @@ export const ProjectCard = ({
                         return <TechPin key={id} name={tech} />;
                     })}
                 </TechStack>
+
+                <ButtonsContainer>
+                    {more && (
+                        <Button
+                            targetBlank='true'
+                            to={more}
+                            img={MoreSvg}
+                            by='65'
+                            bSize='95'
+                        >
+                            More
+                        </Button>
+                    )}
+
+                    {siteUrl && (
+                        <Button targetBlank='true' to={siteUrl} img={LinkSvg}>
+                            View Site
+                        </Button>
+                    )}
+                    {reposUrl && (
+                        <Button
+                            targetBlank='true'
+                            to={reposUrl}
+                            img={CodeSvg}
+                            by='85'
+                        >
+                            Source Code
+                        </Button>
+                    )}
+                </ButtonsContainer>
             </ProjectDetails>
         </Wrapper>
     );

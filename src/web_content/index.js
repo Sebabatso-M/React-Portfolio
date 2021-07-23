@@ -14,7 +14,6 @@ import {
     GithubBgImg,
     BlogrImg,
     ProfileImg,
-    YoutubeSvg,
     GithubOrangeSvg,
     InstagramSvg,
     LinkinSvg,
@@ -200,12 +199,12 @@ export const Socials = [
         img: LinkinSvg,
         name: 'LinkedIn Icon',
     },
-    {
+    /*/{
         id: 3,
         link: 'https://www.youtube.com/channel/UCL-FataRhFtb2P7B0N-br0g',
         img: YoutubeSvg,
         name: 'Youtube Icon',
-    },
+    },*/
     {
         id: 4,
         link: 'https://github.com/Sebabatso-M',

@@ -9,6 +9,8 @@ import { AboutMeInfo } from './About';
 import { MySkills, SkillsLearning } from './Skills';
 import { ProjectCard } from './Projects';
 import { ProjectsData } from '../../web_content';
+import { Button } from '../Buttons';
+import { LinkSvg } from '../../assests';
 
 export const Main = () => {
     return (
@@ -34,6 +36,15 @@ export const Main = () => {
                     eos corrupti sapiente error debitis earum, at dolorum id
                     delectus a doloremque!
                 </AboutMeInfo>
+
+                <Button
+                    to='#'
+                    targetBlank='true'
+                    marginSides='auto'
+                    img={LinkSvg}
+                >
+                    View Resume
+                </Button>
             </MainSection>
 
             <MainSection className='main__section skills' id='skills'>

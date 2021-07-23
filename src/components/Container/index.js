@@ -17,7 +17,7 @@ export const ContainerHead = () => {
 
 export const ContainerFoot = () => {
     return (
-        <FootWrapper>
+        <FootWrapper className='container-foot'>
             <Footer />
         </FootWrapper>
     );

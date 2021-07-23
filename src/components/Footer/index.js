@@ -21,7 +21,7 @@ export const Footer = () => {
                         >
                             <SocialIcon
                                 key={id}
-                                class='socials__icon'
+                                className='socials__icon'
                                 src={img}
                                 alt={name}
                             />

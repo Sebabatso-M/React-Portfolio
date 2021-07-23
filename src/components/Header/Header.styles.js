@@ -12,6 +12,6 @@ export const ScrollProgress = styled.div`
     background: var(--orange);
     height: ${toRem(3)};
     border-radius: ${toRem(25)};
-    width: 100%;
+    width: 0;
     max-width: 100%;
 `;
