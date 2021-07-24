@@ -7,6 +7,7 @@ import {
     MessageWrapper,
     RequiredInput,
 } from './ContactForm.styles';
+import { SubmitButton } from '../Buttons';
 
 export const ContactForm = () => {
     return (
@@ -56,6 +57,8 @@ export const ContactForm = () => {
                         Required Field
                     </RequiredInput>
                 </MessageWrapper>
+
+                <SubmitButton>Send Message</SubmitButton>
             </Form>
         </Wrapper>
     );

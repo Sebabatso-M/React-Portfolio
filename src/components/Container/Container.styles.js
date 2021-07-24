@@ -21,7 +21,14 @@ export const FootWrapper = styled.div`
     ${breakpoint({
         size: 'mobile_ls',
         content: `
-        padding-top: ${toRem(80)};
+        padding-top: var(--mb-val-m);
+    `,
+    })}
+
+    ${breakpoint({
+        size: 'laptop_s',
+        content: `
+        padding-top: var(--mb-val-l);
     `,
     })}
 `;

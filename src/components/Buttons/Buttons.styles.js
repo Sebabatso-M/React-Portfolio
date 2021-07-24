@@ -63,3 +63,23 @@ export const ButtonContainer = styled.div`
     `,
     })}
 `;
+
+export const SubmitWrapper = styled(Wrapper)`
+    box-shadow: 0 ${toRem(4)} ${toRem(4)} hsl(14, 100%, 28%);
+`;
+
+export const ButtonUpWrapper = styled.div`
+    background: var(--white) url(${(props) => props.src});
+    background-position: center;
+    background-size: 120%;
+    border: ${toRem(3)} solid var(--orange);
+    border-radius: 50%;
+    width: ${toRem(50)};
+    height: ${toRem(50)};
+    position: fixed;
+    right: 4%;
+    bottom: ${toRem(120)};
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+`;
