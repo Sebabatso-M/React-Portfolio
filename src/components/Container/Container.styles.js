@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { toRem, breakpoint } from '../../Utils/functions';
 
 export const HeadWrapper = styled.div`
-    /* padding-bottom: calc(var(--mb-val-l) + 35px); */
+    margin-bottom: calc(var(--mb-val-l) + 35px);
 `;
 
 export const FootWrapper = styled.div`

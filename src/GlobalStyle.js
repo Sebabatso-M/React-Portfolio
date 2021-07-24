@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { toRem } from './Utils/functions';
+import { toRem, breakpoint } from './Utils/functions';
 
 export const GlobalStyles = createGlobalStyle`
 
@@ -70,15 +70,37 @@ img {
 .hidden {
     opacity: 0;
     visibility: hidden;
+
+    ${breakpoint({
+        size: 'tablet',
+        content: `
+        opacity: 1;
+        visibility: visible;
+    `,
+    })}
 }
 
 // applied to body when menu is open
 .no-scroll {
     overflow: hidden;
+
+    ${breakpoint({
+        size: 'tablet',
+        content: `
+        overflow: visible;
+    `,
+    })}
 }
 
 .opened {
     animation: slide 0.5s forwards;
+    
+    ${breakpoint({
+        size: 'tablet',
+        content: `
+        animation: none;
+    `,
+    })}
 }
 
 @keyframes slide {

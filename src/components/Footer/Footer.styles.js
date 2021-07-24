@@ -11,6 +11,7 @@ export const SocialsWrapper = styled.div`
 export const SocialIcon = styled.img`
     height: ${toRem(30)};
     margin: 0 ${toRem(10)};
+    user-select: none;
 
     &:hover {
         transform: scale(1.3);

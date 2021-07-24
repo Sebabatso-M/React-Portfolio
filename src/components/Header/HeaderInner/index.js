@@ -8,6 +8,7 @@ import {
 } from './HeaderInner.styles';
 import { Menu } from '../Menu';
 import { S_LogoSvg, CloseBtnSvg, MenuBtnSvg } from '../../../assests';
+import { breakpoints } from '../../../Utils/variables';
 
 export const HeaderContext = React.createContext();
 
@@ -20,7 +21,15 @@ export const HeaderInner = () => {
 
     useEffect(() => {
         document.body.className = `${isOpen ? 'no-scroll' : ''}`;
-    });
+
+        // to make menu visible from tablet view and up
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= breakpoints['tablet']) {
+                setIsOpen(false);
+            }
+        });
+    }, [isOpen]);
 
     return (
         <HeaderContext.Provider value={{ isOpen, clickHandler }}>
