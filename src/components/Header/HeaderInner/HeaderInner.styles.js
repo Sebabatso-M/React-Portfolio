@@ -85,6 +85,7 @@ export const Overlay = styled.div`
 
     height: 100vh;
     width: 100vw;
+    z-index: 50;
 
     ${breakpoint({
         size: 'tablet',

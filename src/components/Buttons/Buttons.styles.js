@@ -17,7 +17,8 @@ export const Wrapper = styled.a`
 
     padding: ${toRem(12)} 0;
     width: ${toRem(150)};
-    margin: 0 ${(props) => (props.ms ? props.ms : 0)};
+    margin: 0 ${(props) => (props.ms ? props.ms : toRem(6))};
+
     margin-bottom: ${toRem(25)};
 
     &:hover {
@@ -59,7 +60,7 @@ export const ButtonContainer = styled.div`
         size: 'tablet',
         content: `
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: center;
     `,
     })}
 `;

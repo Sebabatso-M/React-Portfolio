@@ -194,18 +194,12 @@ export const Socials = [
     },
     {
         id: 2,
-        link: '',
+        link: 'https://www.linkedin.com/in/sebabatso-mashego/',
         img: LinkinSvg,
         name: 'LinkedIn Icon',
     },
-    /*/{
-        id: 3,
-        link: 'https://www.youtube.com/channel/UCL-FataRhFtb2P7B0N-br0g',
-        img: YoutubeSvg,
-        name: 'Youtube Icon',
-    },*/
     {
-        id: 4,
+        id: 3,
         link: 'https://github.com/Sebabatso-M',
         img: GithubOrangeSvg,
         name: 'Github Icon',

@@ -7,6 +7,6 @@ export const Wrapper = styled.div`
     justify-content: space-evenly;
     flex-wrap: wrap;
 
-    max-width: ${toRem(612)};
+    max-width: ${toRem(689)};
     margin: 0 auto;
 `;

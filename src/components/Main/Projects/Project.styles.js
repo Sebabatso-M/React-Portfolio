@@ -14,10 +14,17 @@ export const Wrapper = styled.div`
     padding-bottom: ${toRem(22)};
 
     ${breakpoint({
+        size: 'mobile_ls',
+        content: `
+        padding-bottom: 0;
+        max-width: ${toRem(550)};
+    `,
+    })}
+    ${breakpoint({
         size: 'tablet',
         content: `
         padding-bottom: 0;
-        max-width: ${toRem(656)};
+        max-width: ${toRem(600)};
     `,
     })}
 `;

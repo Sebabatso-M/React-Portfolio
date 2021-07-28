@@ -125,7 +125,7 @@ export const Arrow = styled.a`
     background-size: contain;
 
     margin: 0 auto;
-
+    z-index: -1;
     ${breakpoint({
         size: 'mobile_m',
         content: `

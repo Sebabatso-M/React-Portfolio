@@ -6,4 +6,8 @@ export const AboutMeInfoWrapper = styled.p`
     margin: 0 auto;
     margin-bottom: var(--mb-val-s);
     max-width: 62ch;
+
+    .orange-highlight {
+        color: var(--orange);
+    }
 `;

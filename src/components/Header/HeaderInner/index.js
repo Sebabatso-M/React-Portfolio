@@ -18,17 +18,21 @@ export const HeaderInner = () => {
     function clickHandler() {
         setIsOpen(!isOpen);
     }
+    function resizeHandler() {
+        if (window.innerWidth >= breakpoints['tablet']) {
+            setIsOpen(false);
+        }
+    }
 
     useEffect(() => {
         document.body.className = `${isOpen ? 'no-scroll' : ''}`;
 
         // to make menu visible from tablet view and up
 
-        window.addEventListener('resize', () => {
-            if (window.innerWidth >= breakpoints['tablet']) {
-                setIsOpen(false);
-            }
-        });
+        window.addEventListener('resize', resizeHandler);
+        return () => {
+            window.removeEventListener('resize', resizeHandler);
+        };
     }, [isOpen]);
 
     return (

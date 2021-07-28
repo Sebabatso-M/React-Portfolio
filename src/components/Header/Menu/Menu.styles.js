@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
 
     overflow-x: hidden;
     width: 90%;
-
+    z-index: 51;
     .active {
         color: var(--orange);
         font-weight: 500;
