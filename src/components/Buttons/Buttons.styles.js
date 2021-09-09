@@ -67,6 +67,7 @@ export const ButtonContainer = styled.div`
 
 export const SubmitWrapper = styled(Wrapper)`
     box-shadow: 0 ${toRem(4)} ${toRem(4)} hsl(14, 100%, 28%);
+    margin-left: 0;
 `;
 
 export const ButtonUpWrapper = styled.div`

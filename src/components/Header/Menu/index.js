@@ -6,7 +6,7 @@ import { HeaderContext } from '../HeaderInner';
 
 export const Menu = () => {
     const { isOpen } = useContext(HeaderContext);
-    const [screenWidth, setScreenWidth] = useState(0);
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
     function setWidth() {
         setScreenWidth(window.innerWidth);
@@ -14,6 +14,8 @@ export const Menu = () => {
 
     useEffect(() => {
         window.addEventListener('resize', setWidth);
+
+        document.querySelector('.navigation__link').classList.add('active');
     }, []);
     return (
         <Wrapper className={`menu fade-in ${!isOpen ? 'hidden' : ''}`}>

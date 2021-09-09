@@ -6,14 +6,6 @@ export const Wrapper = styled.div`
     width: 90%;
     max-width: ${toRem(600)};
 
-    .good {
-        color: rgb(11, 139, 33);
-    }
-
-    .bad {
-        color: rgb(255, 0, 0);
-    }
-
     ${breakpoint({
         size: 'mobile_m',
         content: `
@@ -39,15 +31,6 @@ export const Form = styled.form`
             outline: ${toRem(2)} solid var(--orange);
             outline-offset: ${toRem(-2)};
         }
-    }
-
-    .error {
-        border-color: rgb(255, 0, 0);
-        color: rgb(255, 0, 0);
-    }
-    .success {
-        border-color: rgb(11, 139, 33);
-        color: rgb(11, 139, 33);
     }
 `;
 
@@ -91,4 +74,12 @@ export const RequiredInput = styled.span`
     font-weight: 500;
     font-size: ${toRem(12)};
     color: var(--l-grey);
+`;
+
+export const ErrorInput = styled(RequiredInput)`
+    color: rgb(255, 0, 0);
+`;
+
+export const ValidInput = styled(RequiredInput)`
+    color: rgb(11, 139, 33);
 `;

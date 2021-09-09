@@ -8,10 +8,11 @@ export const Link = ({ destination, linkName, screenSize }) => {
 
     return (
         <Wrapper
-            className={`navigation__link fade-in  ${
+            className={`navigation__link fade-in  
+            ${
                 // only add isOpen class when screen is less than 768px
                 isOpen && screenSize < 768 ? 'opened' : ''
-            }`}
+            }  `}
             href={destination}
             onClick={() => {
                 clickHandler();

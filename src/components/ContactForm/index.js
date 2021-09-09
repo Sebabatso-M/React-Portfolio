@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import {
     Wrapper,
     Form,
@@ -6,6 +6,8 @@ import {
     FormControl,
     MessageWrapper,
     RequiredInput,
+    ErrorInput,
+    ValidInput,
 } from './ContactForm.styles';
 import { SubmitButton } from '../Buttons';
 
@@ -15,11 +17,16 @@ export const ContactForm = () => {
         validate
     );
 
+    const nameInput = useRef(false);
+    const emailInput = useRef(false);
+    const messageInput = useRef(false);
+
     return (
         <Wrapper id='contact-me'>
             <FormTitle>Contact Me</FormTitle>
 
             <Form className='contact-form' onSubmit={handleSubmit} noValidate>
+                {/* Name Input */}
                 <FormControl>
                     <input
                         type='text'
@@ -28,16 +35,20 @@ export const ContactForm = () => {
                         value={inputs.name}
                         placeholder='Name'
                         autoComplete='off'
+                        ref={nameInput}
                         onChange={handleInputChange}
                     />
 
-                    <RequiredInput
-                        className={`required  ${errors.name ? 'bad' : 'good'}`}
-                    >
-                        {errors.name ? errors.name : 'Required Field'}
-                    </RequiredInput>
+                    {errors.name ? (
+                        <ErrorInput>{errors.name}</ErrorInput>
+                    ) : nameInput.current.value ? (
+                        <ValidInput>Name is valid</ValidInput>
+                    ) : (
+                        <RequiredInput>Required Field</RequiredInput>
+                    )}
                 </FormControl>
 
+                {/* Email Input */}
                 <FormControl>
                     <input
                         type='email'
@@ -46,16 +57,28 @@ export const ContactForm = () => {
                         placeholder='Email'
                         value={inputs.email}
                         autoComplete='off'
+                        ref={emailInput}
                         onChange={handleInputChange}
                     />
 
-                    <RequiredInput
-                        className={`required  ${errors.name ? 'bad' : 'good'}`}
-                    >
-                        {errors.email ? errors.email : 'Required Field'}
-                    </RequiredInput>
+                    {errors.email && <ErrorInput>{errors.email}</ErrorInput>}
+                    {emailInput.current.value === '' && (
+                        <RequiredInput>Required Field</RequiredInput>
+                    )}
+                    {isEmail(emailInput.current.value) && (
+                        <ValidInput>Email is valid</ValidInput>
+                    )}
+                    {!isEmail(emailInput.current.value) &&
+                    emailInput.current.value
+                        ? (() => {
+                              errors.email = 'Please enter valid email';
+                          })()
+                        : (() => {
+                              errors.email = '';
+                          })()}
                 </FormControl>
 
+                {/* Message Input */}
                 <MessageWrapper>
                     <label htmlFor='message'>Message</label>
 
@@ -65,12 +88,17 @@ export const ContactForm = () => {
                         placeholder='Your message here...'
                         autoComplete='off'
                         value={inputs.message}
+                        ref={messageInput}
                         onChange={handleInputChange}
                     ></textarea>
 
-                    <RequiredInput className='required'>
-                        Required Field
-                    </RequiredInput>
+                    {errors.message ? (
+                        <ErrorInput>{errors.message}</ErrorInput>
+                    ) : messageInput.current.value ? (
+                        <ValidInput>Message is valid</ValidInput>
+                    ) : (
+                        <RequiredInput>Required Field</RequiredInput>
+                    )}
                 </MessageWrapper>
 
                 <SubmitButton>Send Message</SubmitButton>
@@ -100,7 +128,7 @@ function validate(inputs) {
 
 function isEmail(email) {
     let regex =
-        /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+        /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
     return regex.test(email);
 }
@@ -113,6 +141,9 @@ const useForm = (initialValues, validate) => {
         event.preventDefault();
         const validationErrors = validate(inputs);
         setErrors(validationErrors);
+        if (Object.keys(validationErrors).length === 0) {
+            event.target.submit();
+        }
     };
 
     const handleInputChange = (event) => {
